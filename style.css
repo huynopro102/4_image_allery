@@ -1,0 +1,150 @@
+/*
+overflow: visible;
+overflow: hidden;
+overflow: scroll;
+overflow: auto;
+overflow: inherit;
+//
+object-fit: none;
+object-fit: contain;
+object-fit: cover;
+object-fit: fill;
+//
+-webkit-transform: rotate(7deg); 
+-ms-transform: rotate(7deg);
+-moz-transform: rotate(7deg);
+-webkit- hỗ trợ cho Google Chrome và Safari.
+-ms- 
+-moz-  hỗ trợ cho firefox.
+-o- hỗ trợ opera
+transform
+transform: scale() , phóng to lên gấp 1.2 lần
+transform: translate() 
+transform: rotate()
+transform: skew()
+//
+transition-property
+transition-duration
+transition-timing-function
+transition-delay
+transition
+//
+Flexbox
+
+*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    height:100vh;
+ 
+    background-image: linear-gradient( 45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100% );
+}
+/*
+flex-contain : wrapper
+flex-items : image
+khi hover vào thì transform: scale(1.2) lớn ra phần nào thì cắt phần đó đi dùng overflow:hidden
+
+
+*/
+.wrapper{
+    width: 3064px;
+   height:1584px;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    /* flex-flow: row nowrap; */
+    justify-content: center;
+    align-content:center;
+
+}
+.image{
+    border-radius:10px;
+    margin:10px;
+    height: 24%;
+    width:27%;
+    overflow:hidden;
+    
+}
+.img{
+    width:100%;
+    height:100%;
+}
+.image:hover img{
+    transform:scale(1.2);
+    transition-duration: 0.5s;
+    cursor:pointer;
+}
+/* gallery */
+.gallery{
+   position:fixed;
+   width:100%;
+   height:100%;
+   background: rgba(2, 3, 4, 0.8);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+   opacity:0;
+   transform: scale(0.7);
+   pointer-events: none;
+ 
+
+  
+
+}
+.gallery_inner{
+    width: 76%;
+    height:68%;
+    justify-content:center;
+    align-items:center;
+    object-fit:contain;
+    position:relative;
+}
+.gallery img{
+    width: 100%;
+    height: 100%;
+}
+.gallery .close_model{
+    font-size:100px;
+    color:#fff;
+
+}
+.control_right{
+    font-size:100px;
+    color:#fff;
+
+}
+.control_left{
+    font-size:100px;
+    color:#fff;
+
+}
+
+.close_model{
+    position:absolute;
+    top: 13px;;
+    right:13px;
+    cursor:pointer;
+}
+.control_right{
+   position:absolute;
+   right:100px;
+   cursor:pointer;
+}
+.control_left{
+   position:absolute;
+   left:100px;
+   cursor:pointer;
+}
+.show{
+    opacity:1;
+   transform: scale(1);
+   pointer-events: auto;
+    /* pointer-events nghĩa là tự động nhận events */
+}
+.hide{
+    display: none;
+}
