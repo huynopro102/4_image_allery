@@ -50,8 +50,8 @@ khi hover vào thì transform: scale(1.2) lớn ra phần nào thì cắt phần
 
 */
 .wrapper{
-    width: 3064px;
-   height:1584px;
+    width: 100%;
+   height:100%;
     display:flex;
     flex-direction:row;
     flex-wrap: wrap;
