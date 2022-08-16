@@ -108,17 +108,17 @@ khi hover vào thì transform: scale(1.2) lớn ra phần nào thì cắt phần
     height: 100%;
 }
 .gallery .close_model{
-    font-size:100px;
+    font-size:50px;
     color:#fff;
 
 }
 .control_right{
-    font-size:100px;
+    font-size:44px;
     color:#fff;
 
 }
 .control_left{
-    font-size:100px;
+    font-size:44px;
     color:#fff;
 
 }
